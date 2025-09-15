@@ -1,0 +1,4 @@
+INSERT INTO categories (name,slug) VALUES ('Decor','decor'),('Furniture','furniture') ON DUPLICATE KEY UPDATE name=name;
+INSERT INTO stores (name,description) VALUES ('Main Store','Default store') ON DUPLICATE KEY UPDATE name=name;
+INSERT INTO products (title,description,price,category_id,store_id,created_at) VALUES ('Sample Vase','Nice decorative vase',19.99,1,1,NOW()) ON DUPLICATE KEY UPDATE title=title;
+INSERT INTO users (name,email,password,created_at) VALUES ('Demo User','demo@example.com','$2a$10$CwTycUXWue0Thq9StjUM0uJ8G1x4Vq/6o1I1Z6ZV7q9s2GJ8fHGa',NOW()) ON DUPLICATE KEY UPDATE email=email;
